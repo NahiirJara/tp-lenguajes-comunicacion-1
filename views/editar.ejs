@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RINCON DE PUBLICACIONES - Editar post</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"></head>
+    <link rel="icon" href="/imagenes/favicon.ico">
+  </head>
+
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark "> 
+        <div class="container-fluid">
+          <img src="../img/logo.png" class="img-fluid" width="32px">
+          <a class="navbar-brand" href="#">Rincón de Publicaciones</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Rincón de Publicaciones</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <div style="padding: 10px;">
+      <a type="button" class="btn btn-outline-warning" href="/#">← Atras</a>
+    </div>
+    
+    <div style="padding: 50px">
+      <div class="card mb-3-bg-primary mb-3 text-center">
+        <h5 class="card-header">Editar post</h5>
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="<%= item.imagen %>" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <form method="POST">
+
+                <div class="input-group flex-nowrap" style="padding: 20px 5% 0 5%;">
+                  <span class="input-group-text" id="addon-wrapping">@</span>
+                  <input type="text" class="form-control" name="nombre" placeholder="Tu nombre" value="<%= item.nombre %>" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+              
+                <div class="input-group flex-nowrap" style="padding: 20px 5% 0 5%;">
+                  <input class="form-control" name="titulo" type="text" placeholder="Título del post" value="<%= item.titulo %>" aria-label="default input example">
+                </div>
+
+                <div class="mb-3" style="padding: 20px 5% 0 5%;">
+                  <label for="exampleFormControlTextarea1" class="form-label">Mi Post</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="post"><%= item.post %></textarea>
+                </div>
+
+                <div class="input-group flex-nowrap" style="padding: 20px 5% 40px 5%;">
+                  <span class="input-group-text" id="addon-wrapping">cambia tu imagen</span>
+                  <input type="text" class="form-control" name="imgform" placeholder="url de imagen" value="<%= item.imagen %>" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+          
+                <div class="d-grid gap-2 col-6 mx-auto" style="padding: 10px 5% 0 5%;">
+                  <button class="btn btn-primary" type="submit">Guardar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+     
+
+
+
+
+        
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script></body>
+</body>
+</html>
